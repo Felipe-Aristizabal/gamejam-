@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class UIController : MonoBehaviour
 {
     public TextMeshProUGUI coinText; // Referencia al TextMeshPro en el Canvas
-    private int coins = 0; // Valor inicial de las monedas
+    public int coins = 0; // Valor inicial de las monedas
 
     void Start()
     {
-        // Inicializar el valor de las monedas en 0 y actualizar el texto
         UpdateCoinText();
     }
 
@@ -22,7 +21,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Función para actualizar el texto del TextMeshPro
-    void UpdateCoinText()
+    public void UpdateCoinText()
     {
         coinText.text = coins.ToString(); // Convertir el valor a texto y mostrarlo
     }

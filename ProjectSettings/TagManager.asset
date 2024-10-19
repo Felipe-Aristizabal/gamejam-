@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - CustomerBuilding
+  - WarningZone
+  - Restart
   layers:
   - Default
   - TransparentFX

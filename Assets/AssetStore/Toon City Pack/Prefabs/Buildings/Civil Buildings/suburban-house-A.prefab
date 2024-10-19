@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2798273208837148004}
   - component: {fileID: 1743016419240737510}
+  - component: {fileID: 7333869448006944877}
   m_Layer: 0
   m_Name: CustomerCollider
   m_TagString: CustomerBuilding
@@ -53,6 +54,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5.810012
   m_Center: {x: -0.4408121, y: 3.7887115, z: 0}
+--- !u!114 &7333869448006944877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921040824741627837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f780b34bc5333947a8fcb1300ef0c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  pointsToAdd: 10
 --- !u!1 &7031072911745939369
 GameObject:
   m_ObjectHideFlags: 0

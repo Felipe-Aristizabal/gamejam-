@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gain : MonoBehaviour
 {
-    public GameManager gameManager; // Referencia al script CoinManager
+    [SerializeField] private GameManager uiController; // Referencia al script CoinManager
     public int pointsToAdd = 10; // Valor de puntos a sumar cuando el jugador entre
 
     // Función que detecta cuando algo entra en el Trigger del Gain
@@ -14,7 +14,7 @@ public class Gain : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Llamar a la función AddCoins del CoinManager para sumar puntos
-            gameManager.AddCoins(pointsToAdd);
+            uiController.AddCoins(pointsToAdd);
         }
     }
 }
