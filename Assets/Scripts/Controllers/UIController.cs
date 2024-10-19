@@ -7,6 +7,9 @@ public class UIController : MonoBehaviour
 {
     public TextMeshProUGUI coinText; // Referencia al TextMeshPro en el Canvas
     public int coins = 0; // Valor inicial de las monedas
+    
+    public GameObject warningZonePanel;
+    
 
     void Start()
     {

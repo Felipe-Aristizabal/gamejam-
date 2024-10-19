@@ -6,7 +6,9 @@ using UnityEngine;
 public class CityZoneManager : MonoBehaviour
 {
     
+    [SerializeField] UIController uiController;
     private PlayerPositionState _playerPosition;
+    
     
     private void Start()
     {
@@ -18,6 +20,7 @@ public class CityZoneManager : MonoBehaviour
         if (_playerPosition.isWarning)
         {
             // TODO: HERE IS NECESSARY APLLY THE LOGIC FOR ACTIVE THE WARNING
+            Debug.Log("I'm in limmit");
         }
         else
         {
