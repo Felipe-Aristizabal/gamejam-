@@ -351,6 +351,8 @@ MonoBehaviour:
   maxSpeed: 40
   maxReverseSpeed: 5
   turnSpeed: 50
+  brakePower: 2
+  tiltAngle: 10
 --- !u!54 &895265108
 Rigidbody:
   m_ObjectHideFlags: 0
