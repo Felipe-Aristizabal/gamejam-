@@ -14,6 +14,11 @@ public class MotorcycleController : MonoBehaviour
     private float currentSpeed = 0f; // Velocidad actual de la moto
     private Rigidbody rb;
 
+    public float CurrentSpeed
+    {
+        get { return currentSpeed; }
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // Obtener el componente RigidBody
