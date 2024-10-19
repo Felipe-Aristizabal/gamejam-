@@ -11,9 +11,14 @@ public class MotorcycleController : MonoBehaviour
     public float brakePower = 0.2f; // Poder de frenado al cambiar de dirección
     public float tiltAngle = 15f; // Ángulo de inclinación máximo al girar
 
+    public AudioSource brakeAudioSource; // AudioSource para el freno
+    public AudioClip brakeSound; // Sonido de frenado
+
     private float currentSpeed = 0f; // Velocidad actual de la moto
     private Rigidbody rb;
+    private bool isBraking = false; // Variable para saber si estamos frenando
 
+    // Propiedad pública para acceder a la velocidad
     public float CurrentSpeed
     {
         get { return currentSpeed; }
@@ -31,6 +36,9 @@ public class MotorcycleController : MonoBehaviour
         float turn = 0f; // Inicialmente, no hay rotación
         float tilt = 0f; // Inicialmente, no hay inclinación
 
+        // Detectar si la moto está frenando
+        bool isCurrentlyBraking = false;
+
         // Lógica de frenado y aceleración
         if (moveInput > 0)
         {
@@ -38,6 +46,7 @@ public class MotorcycleController : MonoBehaviour
             if (currentSpeed < 0)
             {
                 currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, brakePower * Time.deltaTime);
+                isCurrentlyBraking = true; // Estamos frenando
             }
             else
             {
@@ -52,6 +61,7 @@ public class MotorcycleController : MonoBehaviour
             if (currentSpeed > 0)
             {
                 currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, brakePower * Time.deltaTime);
+                isCurrentlyBraking = true; // Estamos frenando
             }
             else
             {
@@ -63,6 +73,10 @@ public class MotorcycleController : MonoBehaviour
         else
         {
             // Desaceleración gradual cuando no hay input
+            if (currentSpeed != 0)
+            {
+                isCurrentlyBraking = true; // También consideramos frenar cuando desacelera a 0
+            }
             currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, acceleration * Time.deltaTime);
         }
 
@@ -84,6 +98,17 @@ public class MotorcycleController : MonoBehaviour
 
         // Aplicar la inclinación (tilt) en el eje Z
         transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y, tilt);
+
+        // Reproducir el sonido de freno si está frenando
+        if (isCurrentlyBraking && !isBraking)
+        {
+            brakeAudioSource.PlayOneShot(brakeSound); // Reproducir el sonido de frenado
+            isBraking = true;
+        }
+        else if (!isCurrentlyBraking)
+        {
+            isBraking = false; // Ya no está frenando
+        }
     }
 }
 
