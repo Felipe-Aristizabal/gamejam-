@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2577971300739095132}
   - component: {fileID: 8556746716620714814}
   - component: {fileID: 621598476641718711}
-  - component: {fileID: 7083457002373173993}
   - component: {fileID: 2520581061545799711}
+  - component: {fileID: 7083457002373173993}
   m_Layer: 0
   m_Name: MotocycleTest
   m_TagString: Untagged
@@ -107,24 +107,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7083457002373173993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4454308884326023512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7c785c7c0ba1524cb8edcfd853bdac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 1
-  maxSpeed: 40
-  maxReverseSpeed: 5
-  turnSpeed: 50
-  brakePower: 2
-  tiltAngle: 10
 --- !u!54 &2520581061545799711
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -152,3 +134,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7083457002373173993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4454308884326023512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c785c7c0ba1524cb8edcfd853bdac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 1
+  maxSpeed: 40
+  maxReverseSpeed: 5
+  turnSpeed: 50
+  brakePower: 2
+  tiltAngle: 10
