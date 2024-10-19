@@ -15,7 +15,7 @@ public class SOBuildingData : ScriptableObject
     private int positionBuildingTexture = -1;
     private int counterToRegenerateBuildingPrefab = 0;
     
-    public GameObject GetBuildingPrefab()
+    public GameObject GetBuildingPrefab(Transform spawnParent)
     {
         positionBuildingPrefab = Random.Range(0, buildingPrefab.Count);
         positionBuildingTexture = Random.Range(0, buildingTexture.Count);
@@ -28,7 +28,7 @@ public class SOBuildingData : ScriptableObject
             }
             _builtGeneratedData[positionBuildingPrefab].Add(positionBuildingTexture);
 
-            GameObject building = Instantiate(buildingPrefab[positionBuildingPrefab]);
+            GameObject building = Instantiate(buildingPrefab[positionBuildingPrefab], spawnParent);
             Texture texture = buildingTexture[positionBuildingTexture];
         
             Renderer _renderer = building.GetComponent<Renderer>();
@@ -60,12 +60,12 @@ public class SOBuildingData : ScriptableObject
             if (counterToRegenerateBuildingPrefab < 2)
             {
                 counterToRegenerateBuildingPrefab++;
-                return GetBuildingPrefab();
+                return GetBuildingPrefab(spawnParent);
             }
             else
             {
                 counterToRegenerateBuildingPrefab = 0;
-                return Instantiate(buildingPrefabDefault);
+                return Instantiate(buildingPrefabDefault, spawnParent);
             }
         }
     }
