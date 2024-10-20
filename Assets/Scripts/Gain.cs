@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -14,14 +15,12 @@ public class Gain : MonoBehaviour
         uIController = FindObjectOfType<UIController>();
     }
 
-    // Función que detecta cuando algo entra en el Trigger del Gain
     void OnTriggerEnter(Collider other)
     {
-        // Verificar si el objeto que entró tiene el tag "Player"
         if (other.CompareTag("Player"))
         {
-            // Llamar a la función AddCoins del CoinManager para sumar puntos
-            uIController.AddCoins(pointsToAdd);
+            gameManager.AddCoins(pointsToAdd);
+            Destroy(this.gameObject);
         }
     }
 }
