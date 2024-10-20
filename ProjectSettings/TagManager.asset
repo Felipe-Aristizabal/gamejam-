@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - CustomerBuilding
+  - WarningZone
+  - Restart
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - world
   - 
   - 
   - 
@@ -41,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Elements
+    uniqueID: 3066529671
+    locked: 0
+  - name: UI
+    uniqueID: 3675467791
     locked: 0
