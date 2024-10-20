@@ -596,7 +596,6 @@ GameObject:
   - component: {fileID: 7083457002373173993}
   - component: {fileID: 2135350045683888185}
   - component: {fileID: 6813113043369874967}
-  - component: {fileID: 2577638091210615702}
   - component: {fileID: 6085939041854777639}
   - component: {fileID: 6180243404398174420}
   - component: {fileID: 3521005178718940899}
@@ -615,7 +614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4454308884326023512}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 90.28348, y: 1.1748352, z: 15.099998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -719,8 +718,6 @@ MonoBehaviour:
   turnSpeed: 50
   brakePower: 2
   tiltAngle: 10
-  brakeAudioSource: {fileID: 6180243404398174420}
-  brakeSound: {fileID: 8300000, guid: 28e6cd106d809554392284b913745486, type: 3}
 --- !u!114 &2135350045683888185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,18 +748,8 @@ MonoBehaviour:
   motorSound: {fileID: 8300000, guid: 589b7ca04968b6e4fae582a178cfdda0, type: 3}
   minPitch: 0.8
   maxPitch: 2
---- !u!114 &2577638091210615702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4454308884326023512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44809b974d815c441b92fea005320da9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  brakeAudioSource: {fileID: 6180243404398174420}
+  brakeSound: {fileID: 8300000, guid: 28e6cd106d809554392284b913745486, type: 3}
   radioAudioSource: {fileID: 3521005178718940899}
   songs:
   - {fileID: 8300000, guid: b5c5950d81b150c4384197e2d6597d9f, type: 3}
@@ -988,7 +975,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.5291961
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1837,7 +1824,7 @@ Transform:
   m_GameObject: {fileID: 7060263040074815288}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.57, y: -2.35, z: 0.59}
+  m_LocalPosition: {x: -1.57, y: -1.83, z: 0.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
