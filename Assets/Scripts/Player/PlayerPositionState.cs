@@ -9,10 +9,10 @@ public class PlayerPositionState : MonoBehaviour
     public bool isRestart;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "WarningZone")
-        {
-            isWarning = true;
-        }
+        // if (other.tag == "WarningZone")
+        // {
+        //     isWarning = true;
+        // }
 
         if (other.tag == "Restart")
         {
@@ -26,10 +26,13 @@ public class PlayerPositionState : MonoBehaviour
         {
             isWarning = false;
         }
-
-        if (other.tag == "Restart")
+    }
+    
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "WarningZone")
         {
-            isRestart = false;
+            isWarning = true;
         }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -22,6 +23,7 @@ public class Gain : MonoBehaviour
         {
             // Llamar a la función AddCoins del CoinManager para sumar puntos
             gameManager.AddCoins(pointsToAdd);
+            Destroy(this.gameObject);
         }
     }
 }
