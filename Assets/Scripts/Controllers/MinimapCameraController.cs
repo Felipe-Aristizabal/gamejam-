@@ -3,10 +3,11 @@ using UnityEngine.Assertions;
 
 public class MinimapCameraController : MonoBehaviour
 {
-    private Transform playerTransform;
+    [SerializeField]private Transform playerTransform;
     
-    void Start()
+    void OnEnable()
     {
+        Debug.Log("Im searching");
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Assert.IsNotNull(player, "There is no GameObject with the tag 'Player' in the scene.");
         playerTransform = player.transform;
