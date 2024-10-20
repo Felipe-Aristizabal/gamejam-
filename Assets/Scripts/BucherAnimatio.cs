@@ -4,16 +4,17 @@ using System.Collections;
 
 public class ButtonMover : MonoBehaviour
 {
-    public float moveDistance = 50f; // Distancia a mover el botón
-    public float duration = 0.3f; // Duración de la animación
+    [SerializeField] private float moveDistance = 50f; 
+    [SerializeField] private float duration = 0.3f; 
+    [SerializeField] private ButtonMover[] otherButtons;
+
     private Vector3 originalPosition;
     private bool isMovedDown = false;
 
     void Start()
     {
-        originalPosition = transform.localPosition; // Guarda la posición original
-
-        // Añade el listener al botón
+        originalPosition = transform.localPosition; 
+        
         GetComponent<Button>().onClick.AddListener(ToggleButtonPosition);
     }
 
@@ -21,18 +22,32 @@ public class ButtonMover : MonoBehaviour
     {
         if (isMovedDown)
         {
-            // Regresar a la posición original
             StartCoroutine(MoveToPosition(originalPosition));
         }
         else
         {
-            // Mover hacia abajo
             Vector3 targetPosition = originalPosition - new Vector3(0, moveDistance, 0);
             StartCoroutine(MoveToPosition(targetPosition));
+            
+            foreach (ButtonMover otherButton in otherButtons)
+            {
+                if (otherButton.isMovedDown) 
+                {
+                    otherButton.ResetButtonPosition();
+                }
+            }
         }
-
-        // Cambia el estado
+        
         isMovedDown = !isMovedDown;
+    }
+
+    public void ResetButtonPosition()
+    {
+        if (isMovedDown)
+        {
+            StartCoroutine(MoveToPosition(originalPosition));
+            isMovedDown = false;
+        }
     }
 
     private IEnumerator MoveToPosition(Vector3 targetPosition)
@@ -44,9 +59,9 @@ public class ButtonMover : MonoBehaviour
         {
             transform.localPosition = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
             elapsedTime += Time.deltaTime;
-            yield return null; // Espera el siguiente frame
+            yield return null;
         }
 
-        transform.localPosition = targetPosition; // Asegura que la posición final sea exacta
+        transform.localPosition = targetPosition; 
     }
 }
