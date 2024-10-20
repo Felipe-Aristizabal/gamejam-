@@ -48,6 +48,16 @@ public class MotocycleSound : MonoBehaviour
 
         // ------------------- Sonido de freno -------------------
         // Lógica de frenado: el script MotorcycleController notificará si la moto está frenando
+        if (!radioAudioSource.isPlaying)
+        {
+            StartCoroutine(FadeOutAndNextSong(fadeDuration)); // Iniciar el fade-out cuando la canción termine
+        }
+
+        // Cambiar de canción cuando el jugador presiona la tecla 'R'
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(FadeOutAndNextSong(fadeDuration)); // Iniciar el fade-out al presionar 'R'
+        }
     }
 
     // Función para reproducir el sonido de freno
@@ -86,7 +96,7 @@ public class MotocycleSound : MonoBehaviour
 
         radioAudioSource.volume = 0f;
 
-        while (radioAudioSource.volume < 1.0f)
+        while (radioAudioSource.volume < 0.2f)
         {
             radioAudioSource.volume += Time.deltaTime / fadeDuration;
             yield return null;
