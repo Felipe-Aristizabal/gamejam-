@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: b185a8275a5c991439c6302430eabc44, type: 3}
+  - {fileID: 5561349426305759274, guid: 7c520fafbf3673f40bf16651e108b2dd, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -599,6 +599,7 @@ GameObject:
   - component: {fileID: 6085939041854777639}
   - component: {fileID: 6180243404398174420}
   - component: {fileID: 3521005178718940899}
+  - component: {fileID: 4520323492482891324}
   m_Layer: 0
   m_Name: MotocycleTest
   m_TagString: Player
@@ -1050,6 +1051,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4520323492482891324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4454308884326023512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf5f774fbd217043a1b3c95b338f6ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 56c2e8da9ca75db4eafb77ba529fd0fd, type: 2}
+  - {fileID: 2100000, guid: 71d660fa6f5f758439d1f59a3457b1c0, type: 2}
+  - {fileID: 2100000, guid: c80e08b4908a1e14c80f44fcd894d6fb, type: 2}
+  - {fileID: 2100000, guid: 640ab1a520092724d9163e3eb1bf1aa7, type: 2}
+  objectsToChange:
+  - {fileID: 5616157511629416428}
+  - {fileID: 8562534727084682025}
+  - {fileID: 4609314241442360887}
+  - {fileID: 607017952281536010}
+  purchasedMaterials: []
+  costToFixColor: 10
+  uiController: {fileID: 0}
 --- !u!1 &4609314241442360887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1137,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: b185a8275a5c991439c6302430eabc44, type: 3}
+  - {fileID: 5561349426305759274, guid: 7c520fafbf3673f40bf16651e108b2dd, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1443,7 +1469,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: b185a8275a5c991439c6302430eabc44, type: 3}
+  - {fileID: 5561349426305759274, guid: 7c520fafbf3673f40bf16651e108b2dd, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2098,7 +2124,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: b185a8275a5c991439c6302430eabc44, type: 3}
+  - {fileID: 5561349426305759274, guid: 7c520fafbf3673f40bf16651e108b2dd, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
