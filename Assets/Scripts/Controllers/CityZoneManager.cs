@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CityZoneManager : MonoBehaviour
 {
@@ -26,9 +27,7 @@ public class CityZoneManager : MonoBehaviour
         
         if (_playerPosition.isRestart)
         {
-            uiController.EnableWarning(false);
-            _playerPosition.isWarning = false;
-            Debug.Log("I'm out");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
