@@ -990,6 +990,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 621598476641718711, guid: 28d8f5c017f1531499487ac10a7a21ea, type: 3}
     - {fileID: 4520323492482891324, guid: 28d8f5c017f1531499487ac10a7a21ea, type: 3}
+    - {fileID: 6886232335251619919, guid: 28d8f5c017f1531499487ac10a7a21ea, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1050,6 +1051,7 @@ MonoBehaviour:
   - {fileID: 2334039931094683462}
   - {fileID: 7586179316124207704}
   - {fileID: 6835506113625670245}
+  purchasedMaterials: []
   costToFixColor: 10
   uiController: {fileID: 3247274673925502746}
 --- !u!4 &7782543561522916451 stripped

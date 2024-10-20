@@ -713,11 +713,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c785c7c0ba1524cb8edcfd853bdac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 1
+  acceleration: 2
   maxSpeed: 40
   maxReverseSpeed: 5
   turnSpeed: 50
-  brakePower: 2
+  brakePower: 5
   tiltAngle: 10
 --- !u!114 &2135350045683888185
 MonoBehaviour:
@@ -1833,7 +1833,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2631164683858221395}
-  - component: {fileID: 6886232335251619919}
+  - component: {fileID: 3940363037435092877}
   m_Layer: 0
   m_Name: modeling_vespa final
   m_TagString: Player
@@ -1875,8 +1875,8 @@ Transform:
   - {fileID: 4825658807048329224}
   m_Father: {fileID: 4229215564779636748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &6886232335251619919
-CapsuleCollider:
+--- !u!65 &3940363037435092877
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1893,11 +1893,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.8952193
-  m_Height: 3.0774612
-  m_Direction: 2
-  m_Center: {x: 1.514595, y: 2.343021, z: -0.7600062}
+  serializedVersion: 3
+  m_Size: {x: 0.56713295, y: 1.6585374, z: 2.65411}
+  m_Center: {x: 1.497786, y: 2.3108647, z: -0.8120785}
 --- !u!1 &7875340138210353095
 GameObject:
   m_ObjectHideFlags: 0
