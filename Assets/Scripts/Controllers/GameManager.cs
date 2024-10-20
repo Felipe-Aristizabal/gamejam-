@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private UIController uIController;
+
+    [SerializeField] private GameObject catPizzaEnv;
+    [SerializeField] private GameObject catMenu;
+    [SerializeField] private GameObject catMoto;
+    [SerializeField] private GameObject catPizzaBox;
     
-    
+    [SerializeField] private GameObject mainCamera;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject mainCanva;
     
     
     // Method for update the coins TXT
@@ -16,4 +23,28 @@ public class GameManager : MonoBehaviour
         uIController.coins += amount; // Sumar el valor pasado como parámetro
         uIController.UpdateCoinText(); // Actualizar el texto
     }
+
+    public void SwitchCatPizza(bool value)
+    {
+        
+    }
+
+    IEnumerator PlayAnims()
+    {
+        catMenu.GetComponent<Animator>().SetBool("isPlaying", true);
+
+        yield return new WaitForSeconds(1.2f);
+        catPizzaBox.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        catMoto.GetComponent<Animator>().SetBool("isPlaying", true);
+        
+        yield return new WaitForSeconds(2.5f);
+        mainCamera.SetActive(true);
+        player.SetActive(true);
+        mainCanva.SetActive(true);
+        
+        catPizzaEnv.SetActive(false);
+    }
+    
+    
 }
