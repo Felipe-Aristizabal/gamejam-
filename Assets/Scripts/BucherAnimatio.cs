@@ -1,17 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class ButtonMover : MonoBehaviour
 {
     public float moveDistance = 50f; // Distancia a mover el botón
+    public float duration = 0.3f; // Duración de la animación
     private Vector3 originalPosition;
     private bool isMovedDown = false;
-    private RectTransform rectTransform;
 
     void Start()
     {
-        rectTransform = GetComponent<RectTransform>(); // Obtiene el RectTransform del mismo botón
-        originalPosition = rectTransform.anchoredPosition; // Guarda la posición original
+        originalPosition = transform.localPosition; // Guarda la posición original
 
         // Añade el listener al botón
         GetComponent<Button>().onClick.AddListener(ToggleButtonPosition);
@@ -22,15 +22,31 @@ public class ButtonMover : MonoBehaviour
         if (isMovedDown)
         {
             // Regresar a la posición original
-            rectTransform.anchoredPosition = originalPosition;
+            StartCoroutine(MoveToPosition(originalPosition));
         }
         else
         {
             // Mover hacia abajo
-            rectTransform.anchoredPosition = originalPosition - new Vector3(0, moveDistance, 0);
+            Vector3 targetPosition = originalPosition - new Vector3(0, moveDistance, 0);
+            StartCoroutine(MoveToPosition(targetPosition));
         }
 
         // Cambia el estado
         isMovedDown = !isMovedDown;
+    }
+
+    private IEnumerator MoveToPosition(Vector3 targetPosition)
+    {
+        Vector3 startPosition = transform.localPosition;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            transform.localPosition = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null; // Espera el siguiente frame
+        }
+
+        transform.localPosition = targetPosition; // Asegura que la posición final sea exacta
     }
 }
