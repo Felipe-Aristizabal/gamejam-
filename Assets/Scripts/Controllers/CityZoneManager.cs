@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CityZoneManager : MonoBehaviour
 {
@@ -15,29 +16,19 @@ public class CityZoneManager : MonoBehaviour
         _playerPosition = FindObjectOfType<PlayerPositionState>();    
     }
 
-    public void ActiveWarning()
+    private void FixedUpdate()
     {
-        if (_playerPosition.isWarning)
-        {
-            // TODO: HERE IS NECESSARY APLLY THE LOGIC FOR ACTIVE THE WARNING
-            Debug.Log("I'm in limmit");
-        }
-        else
-        {
-            // TODO: HERE IS NECESSARY APLLY THE LOGIC FOR DESACTIVE THE WARNING
-        }
-        
+        ActiveWarning();
     }
 
-    public void Restart()
+    public void ActiveWarning()
     {
+        uiController.EnableWarning(_playerPosition.isWarning);
+        
         if (_playerPosition.isRestart)
         {
-            // TODO: HERE IS NECESSARY APLLY THE LOGIC FOR ACTIVE THE WARNING
-        }
-        else
-        {
-            // TODO: HERE IS NECESSARY APLLY THE LOGIC FOR DESACTIVE THE WARNING
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+
 }
