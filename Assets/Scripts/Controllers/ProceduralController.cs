@@ -49,7 +49,8 @@ public class ProceduralController : MonoBehaviour
             GameObject customerBuilding = spawnParent.GetChild(randomIndex).gameObject;
             selectedBuildings[i] = customerBuilding;
             customerBuilding.transform.GetChild(0).gameObject.SetActive(true);
-
+            customerBuilding.transform.GetChild(2).gameObject.SetActive(true);
+            
             if (i == 0) 
             {
                 ChangeCameraTransform(customerBuilding);
