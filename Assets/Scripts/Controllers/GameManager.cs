@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject catMenu;
     [SerializeField] private GameObject catMoto;
     [SerializeField] private GameObject catPizzaBox;
+
+    [SerializeField] private GameObject catAnim;
     
     [Header("Game Items")]
     [SerializeField] private GameObject mainCamera;
@@ -71,24 +73,36 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator RestartScene()
     {
+        
+        catAnim.SetActive(true);
+        
+        
         rb.constraints = RigidbodyConstraints.FreezeAll;
 
         // Mover el jugador a la posición inicial guardada
         player.transform.position = _initialPosition;
         player.transform.rotation = _initialRotation;
 
-        yield return new WaitForSeconds(0.1f);
-        rb.constraints = RigidbodyConstraints.None;
-        
-        player.GetComponent<PlayerPositionState>().isRestart = false;
+        catPizzaEnv.SetActive(true);
         mainCamera.SetActive(false);
-        player.SetActive(false);
-        mainCanva.SetActive(false);
-        minimapCamera.SetActive(false);
+        
         
         catPizzaEnv.SetActive(true);
         catMenu.SetActive(true);
         catPizzaBox.SetActive(false);
+        
+        mainCanva.SetActive(false);
+        minimapCamera.SetActive(false);
+        yield return new WaitForSeconds(2.8f);
+        catAnim.SetActive(false);
+        
+        
+        rb.constraints = RigidbodyConstraints.None;
+        
+        player.GetComponent<PlayerPositionState>().isRestart = false;
+        
+        player.SetActive(false);
+        
         
         catPizzaBox.GetComponent<Animator>().Rebind();
         catMenu.GetComponent<Animator>().Rebind();
