@@ -50,9 +50,9 @@ public class GameManager : MonoBehaviour
         StartCoroutine((PlayAnims()));
     }
 
-    public void OpenCredits(GameObject creditsGameObject)
+    public void OpenSpecificGameObject(GameObject gameObjectToOpen)
     {
-        creditsGameObject.SetActive(true);
+        gameObjectToOpen.SetActive(true);
     }
 
     IEnumerator PlayAnims()
