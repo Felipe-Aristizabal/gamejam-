@@ -1,0 +1,152 @@
+[
+    {
+        "customerName": "John Doe",
+        "foodQuantity": "2 Pizzas",
+        "drinkQuantity": "3 Sodas"
+    },
+    {
+        "customerName": "Jane Smith",
+        "foodQuantity": "1 Lasagna",
+        "drinkQuantity": "2 Juices"
+    },
+    {
+        "customerName": "Bob Johnson",
+        "foodQuantity": "3 Pizzas",
+        "drinkQuantity": "4 Sodas"
+    },
+    {
+        "customerName": "Alice Brown",
+        "foodQuantity": "1 Pizza",
+        "drinkQuantity": "1 Water"
+    },
+    {
+        "customerName": "Michael Green",
+        "foodQuantity": "2 Lasagnas",
+        "drinkQuantity": "2 Beers"
+    },
+    {
+        "customerName": "Sarah White",
+        "foodQuantity": "4 Pizzas",
+        "drinkQuantity": "5 Sodas"
+    },
+    {
+        "customerName": "Chris Black",
+        "foodQuantity": "1 Lasagna",
+        "drinkQuantity": "1 Soda"
+    },
+    {
+        "customerName": "Emma Thompson",
+        "foodQuantity": "2 Pizzas",
+        "drinkQuantity": "3 Juices"
+    },
+    {
+        "customerName": "David Lee",
+        "foodQuantity": "3 Lasagnas",
+        "drinkQuantity": "3 Waters"
+    },
+    {
+        "customerName": "Sophia Davis",
+        "foodQuantity": "1 Pizza",
+        "drinkQuantity": "2 Sodas"
+    },
+    {
+        "customerName": "Oliver Brown",
+        "foodQuantity": "3 Pizzas",
+        "drinkQuantity": "4 Beers"
+    },
+    {
+        "customerName": "Liam Wilson",
+        "foodQuantity": "2 Lasagnas",
+        "drinkQuantity": "3 Sodas"
+    },
+    {
+        "customerName": "Emily Clark",
+        "foodQuantity": "2 Pizzas",
+        "drinkQuantity": "2 Waters"
+    },
+    {
+        "customerName": "Lucas Miller",
+        "foodQuantity": "4 Pizzas",
+        "drinkQuantity": "6 Juices"
+    },
+    {
+        "customerName": "Mia Johnson",
+        "foodQuantity": "1 Lasagna",
+        "drinkQuantity": "1 Juice"
+    },
+    {
+        "customerName": "James Anderson",
+        "foodQuantity": "2 Pizzas",
+        "drinkQuantity": "2 Sodas"
+    },
+    {
+        "customerName": "Charlotte Moore",
+        "foodQuantity": "3 Lasagnas",
+        "drinkQuantity": "2 Beers"
+    },
+    {
+        "customerName": "Benjamin Harris",
+        "foodQuantity": "1 Pizza",
+        "drinkQuantity": "1 Water"
+    },
+    {
+        "customerName": "Amelia Walker",
+        "foodQuantity": "2 Pizzas",
+        "drinkQuantity": "3 Sodas"
+    },
+    {
+        "customerName": "Ethan Martin",
+        "foodQuantity": "3 Pizzas",
+        "drinkQuantity": "4 Sodas"
+    },
+    {
+        "customerName": "Mason Wright",
+        "foodQuantity": "1 Lasagna",
+        "drinkQuantity": "1 Juice"
+    },
+    {
+        "customerName": "Ava Adams",
+        "foodQuantity": "2 Lasagnas",
+        "drinkQuantity": "2 Waters"
+    },
+    {
+        "customerName": "Harper Scott",
+        "foodQuantity": "4 Pizzas",
+        "drinkQuantity": "5 Sodas"
+    },
+    {
+        "customerName": "Isabella Collins",
+        "foodQuantity": "1 Pizza",
+        "drinkQuantity": "1 Soda"
+    },
+    {
+        "customerName": "Elijah Turner",
+        "foodQuantity": "3 Lasagnas",
+        "drinkQuantity": "4 Juices"
+    },
+    {
+        "customerName": "Mila Thomas",
+        "foodQuantity": "1 Pizza",
+        "drinkQuantity": "1 Beer"
+    },
+    {
+        "customerName": "Henry Thompson",
+        "foodQuantity": "2 Lasagnas",
+        "drinkQuantity": "3 Beers"
+    },
+    {
+        "customerName": "Oliver Taylor",
+        "foodQuantity": "3 Pizzas",
+        "drinkQuantity": "3 Sodas"
+    },
+    {
+        "customerName": "Aiden Lewis",
+        "foodQuantity": "2 Lasagnas",
+        "drinkQuantity": "2 Waters"
+    },
+    {
+        "customerName": "Eleanor White",
+        "foodQuantity": "2 Pizzas",
+        "drinkQuantity": "2 Sodas"
+    }
+]
