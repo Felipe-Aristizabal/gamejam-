@@ -8,13 +8,8 @@ public class CityZoneManager : MonoBehaviour
 {
     
     [SerializeField] UIController uiController;
-    private PlayerPositionState _playerPosition;
-    
-    
-    private void Start()
-    {
-        _playerPosition = FindObjectOfType<PlayerPositionState>();    
-    }
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private PlayerPositionState _playerPosition;
 
     private void FixedUpdate()
     {
@@ -27,7 +22,7 @@ public class CityZoneManager : MonoBehaviour
         
         if (_playerPosition.isRestart)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(gameManager.RestartScene());
         }
     }
 
