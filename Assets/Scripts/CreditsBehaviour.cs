@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CreditsBehaviour : MonoBehaviour
 {
-    public void ExitCredits()
+    public void ExitSpecificGameObject(GameObject gameObjectToExit)
     {
-        gameObject.SetActive(false);
+        gameObjectToExit.SetActive(false);
     }
     
     public void OpenSpecificUrl(string urlToOpen)
