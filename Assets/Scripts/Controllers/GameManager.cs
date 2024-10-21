@@ -50,6 +50,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine((PlayAnims()));
     }
 
+    public void OpenCredits(GameObject creditsGameObject)
+    {
+        creditsGameObject.SetActive(true);
+    }
+
     IEnumerator PlayAnims()
     {
         catMenu.GetComponent<Animator>().SetBool("isPlaying", true);
