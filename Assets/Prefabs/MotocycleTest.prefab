@@ -712,11 +712,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c785c7c0ba1524cb8edcfd853bdac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 2
-  maxSpeed: 40
+  acceleration: 2.5
+  maxSpeed: 10
   maxReverseSpeed: 5
   turnSpeed: 50
-  brakePower: 5
+  brakePower: 7
   tiltAngle: 10
 --- !u!114 &2135350045683888185
 MonoBehaviour:

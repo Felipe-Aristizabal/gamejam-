@@ -220,6 +220,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIController: {fileID: 0}
+  catPizzaEnv: {fileID: 0}
+  catMenu: {fileID: 0}
+  catMoto: {fileID: 0}
+  catPizzaBox: {fileID: 0}
+  mainCamera: {fileID: 0}
+  minimapCamera: {fileID: 0}
+  player: {fileID: 0}
+  mainCanva: {fileID: 0}
 --- !u!4 &603936475
 Transform:
   m_ObjectHideFlags: 0
@@ -500,7 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f780b34bc5333947a8fcb1300ef0c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uIController: {fileID: 1757627665}
+  gameManager: {fileID: 0}
   pointsToAdd: 50
 --- !u!1001 &1429293305
 PrefabInstance:
@@ -1050,6 +1058,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContainerPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 3818324167088486022, guid: 0606d70a404501e40a19239102270d5f,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4943506792129961926, guid: 0606d70a404501e40a19239102270d5f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1098,6 +1111,11 @@ PrefabInstance:
     - target: {fileID: 4943506792129961926, guid: 0606d70a404501e40a19239102270d5f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775388775808494038, guid: 0606d70a404501e40a19239102270d5f,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

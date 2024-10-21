@@ -7,12 +7,12 @@ using UnityEngine.Serialization;
 
 public class Gain : MonoBehaviour
 {
-    [SerializeField] private UIController uIController; // Referencia al script CoinManager
+    [SerializeField] private GameManager gameManager; // Referencia al script CoinManager
     public int pointsToAdd = 10; // Valor de puntos a sumar cuando el jugador entre
 
     private void Start()
     {
-        uIController = FindObjectOfType<UIController>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void OnTriggerEnter(Collider other)
