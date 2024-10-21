@@ -14,22 +14,22 @@ Our team at GalPixel Studios is made up of talented developers and artists who h
 ### Team Members 🥇:
 
 - [**Sebastián Escobar**](https://www.linkedin.com/in/sebastianescobart/) - 2D Artist 🎞️  
-  Responsible for illustrations and visual designs that bring the scenes and characters to life.
+  Responsible for illustrations, animations and visual designs that bring the scenes and characters to life.
 
 - [**Majo Rincón**](https://drive.google.com/drive/folders/1-8OdcF5O1SF8xe0EKNtE00oYpPr73qwv) - 3D Artist 🐱  
   In charge of 3D models, ensuring the world of Catzzeria comes alive with detail.
 
 - [**Andrés Bonilla**](https://www.linkedin.com/in/andres-bonilla-galindo/) - Level Designer 👾  
-  Creator of the levels and the random generation of customer houses in each session.
+  Creator of the levels, world building and player movement.
 
 - [**Juliana Loaiza**](https://youtu.be/6yCzQz8Hqss?si=B5OeUU_pQIcHlH1g) - Postprocessing 📸  
-  Responsible for final visual effects, optimizing the game's visual experience.
+  Responsible for final visual effects, optimizing the game's visual experience. 
 
 - [**Juan Pablo Martínez**](https://www.linkedin.com/in/jpablo-martinez/) - Game Designer 🕹️  
-  Responsible for the overall game design, mechanics, and gameplay balance.
+  Responsible for the overall game design, mechanics, and gameplay balance. Also programmer.
 
 - [**Felipe Aristizábal**](https://www.linkedin.com/in/felipearistizabal/) - Game Developer 🤖  
-  Lead programmer, in charge of the game's functionality and mechanics.
+  Lead programmer, co-creator of the the random generation of customer houses in each session
 
 - [**Luisa Guzmán**](https://drive.google.com/drive/folders/1u9nwwitav-op0k_Buubmd1i5FTUgDSYP) - UI/UX Designer 🎨  
   Responsible for user interface design, ensuring intuitive and enjoyable game interaction.
